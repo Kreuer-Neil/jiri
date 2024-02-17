@@ -6,7 +6,6 @@ if (file_exists(__DIR__.'/database/database.php')) {
 
 
 
-
 $db = getPDO();
 $statement = $db->query('SELECT * FROM jiris WHERE starting_at < now() ORDER BY starting_at DESC');
 $passed_jiris = $statement->fetchAll();
